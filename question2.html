@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FE examination</title>
+</head>
+
+<body>
+  <p>
+    <b>Question 2</b><br>
+    Create a function to remove duplicate value from an array with Javascript.<br>
+    Example:<br>
+    Input: [1, 2, 2, 3, 4, 6, 7, 8, 6]<br>
+    Output: [1, 2, 3, 4, 6, 7, 8]<br>
+    <b>Result:</b> in console.log
+  </p>
+</body>
+<script type="text/javascript">
+  //Sắp xếp mảng ban đầu trước, so sánh nó với các mảng liền kề và lưu trữ chúng trong mảng mới nếu chúng khác nhau.
+  function removeDuplicate(arr) {
+    var tempArr = arr.sort()
+    var newArr = [tempArr[0]]
+    for (let i = 1; i < tempArr.length; i++) {
+      if (tempArr[i] !== tempArr[i - 1]) {
+        newArr.push(tempArr[i])
+      }
+    }
+    return newArr
+  }
+  let input = [1, 2, 2, 3, 4, 6, 7, 8, 6]
+  let output = removeDuplicate(input)
+  console.log(output)
+</script>
+
+</html>
